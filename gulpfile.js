@@ -112,3 +112,11 @@ gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() 
   gulp.watch('*.html', browserSync.reload);
   gulp.watch('js/**/*.js', browserSync.reload);
 });
+
+// Gulp Build
+gulp.task("build", ['default'], function() {
+   return gulp.src(['css/agency.min.css', 'js/agency.min.js', 'index.html',
+                    'img/**', 'vendor/**', 'favicon.ico',
+                    'CNAME'], { base: './'})
+       .pipe(gulp.dest('dist'));
+});

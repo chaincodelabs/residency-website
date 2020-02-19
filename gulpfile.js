@@ -117,6 +117,6 @@ gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() 
 gulp.task("build", ['default'], function() {
    return gulp.src(['css/agency.min.css', 'js/agency.min.js', 'index.html',
                     'img/**', 'vendor/**', 'favicon.ico', 'presentations/**',
-                    'CNAME'], { base: './'})
+                    'CNAME', 'resources.html'], { base: './'})
        .pipe(gulp.dest('dist'));
 });
